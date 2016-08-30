@@ -1,0 +1,327 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[a4paper,10pt,oneside]{article}
+\documentclass[letterpaper,10pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPESETTING OPTIONS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TypesetInNonStopMode}{1}
+\newcommand{\TypesetInDraftMode}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{CV-Preamble.tex}
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Elan Miller}
+\newcommand{\CVTitle}{Elan Miller's CV}
+\newcommand{\CVNote}{CV compiled on {\today} }
+\newcommand{\CVWebpage}{https://github.com/elanbmiller}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={Elan Miller},
+pdfsubject={},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{Elan Miller}
+
+\begin{subtitle}
+\href{}
+{1293 Breezy Lane, Atlanta, GA 30329}
+\par
+\href{mailto:elanbmiller@wustl.edu}
+{elanbmiller@wustl.edu}
+\,\SubBulletSymbol\,
+\,(404)\,315-8168
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\CVWebpage}
+\end{subtitle}
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% SUMMARY %%
+%%%%%%%%%%%%%%%
+
+\section{Objective}
+{Objective}
+{PDF:Objective}
+
+Current junior at Washington University in St. Louis pursuing a degree in computer science. I am fascinated by the field and enjoy the intersection of mathematics and CS. Potentially interested in graduate work after completion of my degree.
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+\href{http://engineering.wustl.edu/Pages/home.aspx}
+{\textbf{Washington University in St. Louis}},
+St. Louis, Missouri, USA
+
+\GapNoBreak
+\BulletItem
+Bachelor of Science Candidate in
+\href{http://cse.wustl.edu/Pages/default.aspx}
+{Computer Science}
+\hfill
+\DatestampYMD{2014}{8}{15} --
+\DatestampYMD{2018}{5}{17}
+\begin{detail}
+Second major in \href{http://wumath.wustl.edu}{Mathematics}
+\SubBulletItem
+Cumulative GPA: 3.65 / 4.0
+\SubBulletItem
+Deans List: Every Semester
+\end{detail}
+
+
+\BigGap
+
+\textit{Relevant Coursework}
+\par
+Calculus 1-3, Linear Algebra, Discrete Math, Proofwriting, Probability and Statistics, Digital Logic and Computer Design, Object Oriented Programming, Arduino Hardware Programming, Cloud Computing With Big Data, Rapid Prototype Development and Creative Programming, Algorithms and Data Structures, and others
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\section
+{Skills}
+{Skills}
+{PDF:Skills}
+
+
+\par
+Experience With:
+
+{\LaTeX},
+Python, Java, C/C++, Bash, and more.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Experience}
+{Experience}
+{PDF:Experience}
+
+\href{http://cse.unl.edu/}
+{\textbf{Research Experience for Undergraduates at University of Nebraska at Lincoln}}
+\par
+Undergraduate Research Student
+\hfill
+\DatestampYMD{2016}{08}{25} --
+\DatestampYMD{2016}{05}{01}
+\begin{detail}
+\BulletItem
+Project:
+Investigating Data Leaks in Android Applications
+\BulletItem
+Supervisor:
+\href{http://cse.unl.edu/~qyan/}{Dr. Qiben Yan}
+\BulletItem
+Description:
+Created programs and scripts to download and test the 100 most popular apps in the android store, as well as 700 apps from a third party android store, and capture any data leaks using various packet sniffing programs. Also, studied latest innovative techniques, specifically software middleboxes, in mobile security.
+\end{detail}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OTHER WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Other Work\newline
+Experience}
+{Other Work Experience}
+{PDF:OtherWorkExperience}
+
+\href{http://www.menchies.com/}
+{\textbf{Menchies Frozen Yogurt}},
+Atlanta, Georgia, USA
+
+\GapNoBreak
+\BulletItem
+Team Member
+\hfill
+\DatestampYMD{2014}{5}{15} --
+\DatestampYMD{2014}{8}{15}
+\begin{detail}
+\SubBulletItem
+Ensured a friendly environment by always being cheerful and happy
+\SubBulletItem
+Maintained machines by cleaning them and filling them with frozen yogurt
+\SubBulletItem
+Kept store clean and topping containers full
+\end{detail}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Personal Technical Projects %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Personal
+\newline Projects}
+{Personal Projects}
+{PDF:TechnicalProjects}
+
+\textbf{Game Development},
+\textit{C++}
+\begin{detail}
+\BulletItem
+Created a command line game enabling users to play TicTacToe, Sudoku, Gomoku and Checkers.
+\newline (More projects on github)
+\end{detail}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% CAMPUS ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Campus Activities}
+{Campus Activities}
+{PDF:CampusActivities}
+
+\href{http://www.chabadwashu.org/}
+{\textbf{Chabad Center for Jewish Life}},
+Washington University in St. Louis
+
+\GapNoBreak
+\BulletItem
+Board Member
+\hfill
+\DatestampYMD{2014}{08}{15} -- Present
+\begin{detail}
+\SubBulletItem
+Coordinate many activities such as prayer services every Friday evening, holiday banquets on Passover and Succot. I also pass out fliers and paint advertisements for events.
+\end{detail}
+
+
+
+%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%
+
+\section
+{Languages}
+{Languages}
+{PDF:Languages}
+
+\BulletItem
+English: Native language.
+
+\GapNoBreak
+\BulletItem
+Hebrew: Intermediate (speaking, reading, writing).
+
+
+
+%%%%%%%%%%%%%%%
+%% INTERESTS %%
+%%%%%%%%%%%%%%%
+
+\section
+{Interests}
+{Interests}
+{PDF:Interests}
+
+Rock Climbing, Hiking, Running, Biking,
+Guitar and Bass, Cooking, Reading, Connecting with People!
+
+%%%%%%%%%%%%%%%%
+%% REFERENCES %%
+%%%%%%%%%%%%%%%%
+
+\section
+{References}
+{References}
+{PDF:References}
+
+\BulletItem
+\textbf{Professor Qiben Yan}
+\newline
+Professor of Computer Science
+\newline
+University of Nebraska Lincoln
+\begin{detail}
+\SubItem
+\newline
+\href{mailto:yan@unl.edu}
+{yan@unl.edu}
+\,\SubBulletSymbol\,
+(402)\,472-2401
+\end{detail}
+
+\end{body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+\begin{flushright}
+\UseNoteFont%
+[\textit{\CVNote}]%
+\hspace{2.0mm}\null
+\end{flushright}
+
+\label{LastPage}~
+\end{document}
